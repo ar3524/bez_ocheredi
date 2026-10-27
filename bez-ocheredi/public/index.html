@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансовый университет / Питание</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Финансовый университет / Питание</h1>
+    </header>
+    
+    <main>
+        <section id="menu-section">
+            <h2>Меню на сегодня</h2>
+            <div id="menu-list"></div>
+        </section>
+
+        <section id="cart-section">
+            <h2>Ваш заказ</h2>
+            <div id="cart-items"></div>
+            <h3 id="total-price">Итого: 0 ₽</h3>
+            <div class="payment-buttons">
+                <button onclick="checkout('online')" class="btn-online">Онлайн</button>
+                <button onclick="checkout('offline')" class="btn-offline">При получении</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно для QR -->
+    <div id="qr-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Заказ оформлен!</h2>
+            <p id="order-details"></p>
+            <img id="qr-image" src="" alt="QR-код">
+            <p>Покажите этот код на выдаче</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
